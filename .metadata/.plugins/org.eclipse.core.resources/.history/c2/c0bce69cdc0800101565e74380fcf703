@@ -1,0 +1,17 @@
+package ar.edu.unlp.info.oo2.PiedraPapelTijera;
+
+public class Lagarto extends Opcion{
+
+	public Lagarto() {
+		super("Lagarto");
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public String jugarContra(Opcion otro) {
+		// TODO Auto-generated method stub
+		return "Pierde Lagarto";
+	}
+	
+
+}

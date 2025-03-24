@@ -1,0 +1,12 @@
+package ar.edu.unlp.info.oo2.RedSocial;
+
+public class Tweet {
+	
+	private String mensaje;
+	
+	public Tweet() {
+		this.minimo= 1;
+		this.max= 280;
+	}
+
+}

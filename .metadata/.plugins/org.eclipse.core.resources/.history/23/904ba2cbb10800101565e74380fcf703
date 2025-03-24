@@ -1,0 +1,22 @@
+package ar.edu.unlp.info.oo2.RedSocial;
+
+public class ReTweet extends Tweet{
+	private Tweet twOrig;
+
+	public ReTweet(Tweet twOrig) {
+		super(obtenerMsj(twOrig));
+		this.twOrig= twOrig;
+	}
+	
+	private static String obtenerMsj(Tweet twOrig) {
+		if (twOrig == null) {
+			throw new IllegalArgumentException("No se puede hacer un retweet Nulo");
+		}
+		return twOrig.getMensaje();
+	}
+	
+	public Tweet getTweetOrig() {
+		return twOrig;
+	}
+
+}

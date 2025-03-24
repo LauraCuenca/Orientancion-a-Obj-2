@@ -1,0 +1,8 @@
+package ar.edu.unlp.info.oo2.PiedraPapelTijera;
+
+public class Juego {
+	
+public static void jugar(Opcion op1, Opcion op2) {
+        return op1.getNombre() + " vs " + op2.getNombre() + " → " + op1.jugarContra(op2);
+	    }
+}

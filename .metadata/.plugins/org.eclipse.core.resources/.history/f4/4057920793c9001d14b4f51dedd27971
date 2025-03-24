@@ -1,0 +1,46 @@
+package ar.edu.info.unlp.ejercicioDemo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Serv_Tw {
+	
+	private List <Usuario> usuarios;
+	
+	public Serv_Tw() {
+		this.usuarios= new ArrayList <>();
+	}
+	
+	public void nuevoUs (String nombre) {
+		if (nombreNoUsado(nombre)) {
+			Usuario u = new Usuario (nombre);
+			this.usuarios.add(u);
+		}
+	}
+	
+	public int cantUsuarios() {
+		return this.usuarios.size();
+	}
+	
+	public void eliminarUsuario(String nombre) {
+		Usuario usuarioAux= buscarNombre(nombre);
+		if (usuarioAux != null) {
+			this.usuarios.remove(usuarioAux);
+			usuarioAux.elimTodo();
+			usuarioAux = null;
+			System.gc();
+		}
+	}
+
+	private Usuario buscarNombre(String nombre) {
+		// busca nombre del usuario
+		return usuarios.stream().filter(u -> u != null).filter(u -> u.getScreenName().equals(n)).findFirst()
+				.orElse(null);
+	}
+
+	private boolean nombreNoUsado(String nombre) {
+		// devuelve true si No esta usado el nombre
+		return  !(this.usuarios.stream().anyMatch(usuario -> usuario.getScreenName().equals(nombre)));
+	}
+
+}

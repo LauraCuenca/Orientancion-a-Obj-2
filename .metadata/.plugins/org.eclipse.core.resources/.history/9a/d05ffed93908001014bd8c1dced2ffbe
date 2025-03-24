@@ -1,0 +1,24 @@
+package ar.edu.unlp.info.oo2.RedSocial;
+
+import java.util.ArrayList;
+
+public class Usuario {
+	
+	private String ScreenName;
+	private ArrayList<Tweet> lista;
+	
+	public Usuario(String n) {
+		this.ScreenName = n;
+	}
+	
+	public String getScreenName() {
+		return ScreenName;
+	}
+	
+	public Tweet getTweets() {
+		return lista;
+	}
+	
+	public 
+
+}

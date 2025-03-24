@@ -1,0 +1,34 @@
+package ar.edu.unlp.info.oo2.RedSocial;
+
+import java.util.ArrayList;
+import java.util.Objects;
+
+public class Usuario {
+	
+	private String ScreenName;
+	private ArrayList<Tweet> lista;
+	
+	public Usuario(String n) {
+		this.ScreenName = n;
+	}
+	
+	public String getScreenName() {
+		return ScreenName;
+	}
+	
+	public ArrayList<Tweet> getTweets() {
+		return lista;
+	}
+	
+	public void deleteTweets(){
+		lista = null;
+	}
+	
+	public boolean equals (Object obj) {
+		if (this == obj) return true;
+		if (obj == null || getClass() != obj.getClass()) return false;
+		Usuario usuario = (Usuario) obj;
+		return Objects.equals(ScreenName, usuario.ScreenName);
+	}
+
+}

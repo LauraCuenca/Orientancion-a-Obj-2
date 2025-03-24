@@ -1,0 +1,49 @@
+package ar.edu.unlp.info.oo2.RedSocial;
+
+import java.util.ArrayList;
+import java.util.Objects;
+
+public class Usuario {
+	
+	private String ScreenName;
+	private ArrayList<Tweet> lista;
+	
+	public Usuario(String n) {
+		this.ScreenName = n;
+		this.lista= new ArrayList<>();
+	}
+	
+	public boolean equals (Object obj) {
+		if (this == obj) return true;
+		if (obj == null || getClass() != obj.getClass()) return false;
+		Usuario usuario = (Usuario) obj;
+		return Objects.equals(ScreenName, usuario.ScreenName);
+	}
+	
+	public int hashCode() {
+		return Objects.hashCode(ScreenName);
+	}
+	
+	public String getScreenName() {
+		return ScreenName;
+	}
+	
+	public ArrayList<Tweet> getTweets() {
+		return lista;
+	}
+	
+	public void  hacerTw (String msj) {
+		Tweet twe = new Tweet(msj);
+		this.lista.add(twe);
+	}
+	
+	public void hacerRt (Tweet tw) {
+		ReTweet reTw = new ReTweet(tw);
+		this.lista.add(reTw);
+	}
+	
+	public void deleteTweets(){
+		lista = null;
+	}
+	
+}

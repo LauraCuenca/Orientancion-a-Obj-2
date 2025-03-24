@@ -1,0 +1,11 @@
+package ar.edu.unlp.info.oo2.RedSocial;
+
+public class ReTweet extends Tweet{
+
+	public ReTweet(Tweet twOrig) {
+		super(msj);
+		// TODO Auto-generated constructor stub
+	}
+	
+
+}

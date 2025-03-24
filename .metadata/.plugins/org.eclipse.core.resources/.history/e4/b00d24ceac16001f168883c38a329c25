@@ -1,0 +1,45 @@
+package ar.edu.info.unlp.ejercicioDemo;
+
+public class Tweet {
+	private String texto;
+	private Usuario usuario;
+	private Tweet reTweet;
+	
+	public Tweet (String t, Usuario u) {
+		this.texto= t;
+		this.usuario= u;
+		this.reTweet= null;
+	}
+	
+
+	public String getTexto() {
+		return texto;
+	}
+	
+	public Usuario getUsuario() {
+		return usuario;
+	}
+	
+	public Tweet getReTweet() {
+		return reTweet;
+	}
+	
+	public boolean soyunRetweet() {
+		if (this.reTweet.equals(null))
+			return false;
+		else
+			return true;
+	}
+	
+	public String dueñoTweet () {
+		if (soyunRetweet())
+			return this.reTweet.usuario.getScreenName();
+		else
+			return null;
+	}
+	public void hacerReTweet(Tweet t) {
+		this.reTweet= t;
+		
+	}
+
+}

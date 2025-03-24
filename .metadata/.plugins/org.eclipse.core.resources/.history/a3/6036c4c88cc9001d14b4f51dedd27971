@@ -1,0 +1,31 @@
+package ar.edu.info.unlp.ejercicioDemo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Usuario {
+	private String screenName;
+	private List <Tweet> tweets;
+	
+	private void setScreenName(String screenName) {
+		this.screenName = screenName;
+	}
+
+	private void setTweets() {
+		this.tweets = new ArrayList<>();
+	}
+	
+	public Usuario(String name) {
+		setScreenName(name);
+		setTweets();
+	}
+
+	//hacer un tweet
+	public void hacerTweet (String s) {
+		if (s.length() > 1 & s.length() < 280) {
+			Tweet tw= new Tweet(s);
+	this.tweets.add(tw);
+		}	
+	}
+
+}

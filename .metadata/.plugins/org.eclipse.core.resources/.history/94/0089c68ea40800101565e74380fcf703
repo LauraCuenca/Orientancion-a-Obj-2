@@ -1,0 +1,8 @@
+package ar.edu.unlp.info.oo2.RedSocial;
+
+import java.util.ArrayList;
+
+public class Twitter {
+	private ArrayList<Usuario> Usuarios;
+
+}

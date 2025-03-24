@@ -1,0 +1,64 @@
+package ar.edu.info.unlp.ejercicioDemo;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+
+public class Serv_twTest {
+Serv_Tw Servicio1; 
+Usuario usu1;
+Usuario usu2;
+Tweet tw1;
+
+		@BeforeEach
+		public void setUp() throws Exception {
+			Servicio1 = new Serv_Tw(); 
+			usu1 = new Usuario ("Laura");
+			usu2 = new Usuario ("Umi");
+			tw1 = new Tweet ("tweet: No uso tw" , usu1);
+		}
+		
+		@Test 
+		public void testAddUsers() {
+			Servicio1.nuevoUs("UsuarioPrueba");
+			assertEquals(1 , Servicio1.cantUsuarios());
+		}
+		@Test 
+		public void testEraseUser() {
+			Servicio1.nuevoUs("UsuarioPrueba2");
+			Servicio1.eliminarUsuario("UsuarioPrueba2");
+			assertTrue(Servicio1.nombreNoUsado("UsuarioPrueba2"));
+		}
+		@Test 
+		public void testUsuario() {
+			assertEquals("Laura" , usu1.getScreenName());
+			assertEquals(0 , usu1.tamañoTw());
+			
+		}
+		@Test  
+			public void testHacertweet() {
+				usu2.hacerTweet("Soy una gata");
+				assertEquals(1 , usu2.tamañoTw());
+				usu2.hacerTweet("");
+				assertEquals(1 , usu2.tamañoTw());
+				usu2.hacerTweet("la recursare de nuevo(?, ya lo veremosss");
+				assertEquals(2 , usu2.tamañoTw());
+				usu2.ReTweet(tw1);
+				assertEquals(3 , usu2.tamañoTw());
+			}
+		
+		@Test 
+		public void testRetweet() {
+			usu2.ReTweet(tw1);
+			assertEquals(1 , usu2.tamañoTw());
+			Tweet t = usu2.getTweets().get(0);
+			assertTrue(t.soyunRetweet());
+			assertEquals("tweet: No uso tw" , t.getTexto());
+			assertEquals(usu1.getScreenName() , t.dueñoTweet());
+		}
+		
+
+}

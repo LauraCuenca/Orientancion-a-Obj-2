@@ -1,0 +1,26 @@
+package ar.edu.unlp.info.oo2.RedSocial;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class Twitter {
+	private Set<Usuario> usuarios;
+	
+	
+	public Twitter() {
+		this.usuarios= new HashSet<>();
+	}
+	
+	public boolean agregarUsuario(Usuario nuevoUsuario) {
+		return usuarios.add(nuevoUsuario);
+	}
+	
+	public boolean eliminarUsuario(Usuario usu) {
+		if (usuarios.remove(usu)) {
+			usu.deleteTweets();
+			return true;
+		}
+		return false;
+	}
+
+}

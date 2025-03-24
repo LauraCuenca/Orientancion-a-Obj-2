@@ -1,0 +1,16 @@
+package ar.edu.unlp.info.oo2.PiedraPapelTijera;
+
+public class Spock extends Opcion{
+
+	public Spock() {
+		super("Spock");
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public String jugarContra(Opcion otro) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

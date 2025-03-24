@@ -1,0 +1,11 @@
+package ar.edu.unlp.info.oo2.RedSocial;
+
+import java.util.Set;
+
+public class Twitter {
+	private Set<Usuario> Usuarios;
+	
+	
+	public 
+
+}

@@ -1,0 +1,11 @@
+INDEX VERSION 1.132+C:\Users\laura\eclipse-workspace\.metadata\.plugins\org.eclipse.jdt.core
+2421490983.index
+1023140987.index
+4270158271.index
+1865797976.index
+3678591556.index
+3138199268.index
+3815824454.index
+190402921.index
+2150716480.index
+2215832872.index

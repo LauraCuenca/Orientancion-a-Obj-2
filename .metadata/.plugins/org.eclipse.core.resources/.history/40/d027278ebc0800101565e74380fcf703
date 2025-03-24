@@ -1,0 +1,20 @@
+package ar.edu.unlp.info.oo2.RedSocial;
+
+import org.junit.jupiter.api.BeforeEach;
+
+public class TwTest {
+	
+	Twitter twitter;
+	
+	@BeforeEach 
+	void setUp() throws Exception {
+		twitter = new Twitter();
+	}
+	
+	@Test
+	public void testAgregarUsuario() {
+		Usuario laurita = twitter.agregarUsuario("laurita");
+		
+	}
+
+}

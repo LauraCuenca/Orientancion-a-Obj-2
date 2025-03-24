@@ -1,0 +1,11 @@
+package ar.edu.unlp.info.oo2.PiedraPapelTijera;
+
+public class Piedra extends Opcion{
+
+	public Piedra() {
+		super("Piedra");
+		// TODO Auto-generated constructor stub
+	}
+	
+
+}

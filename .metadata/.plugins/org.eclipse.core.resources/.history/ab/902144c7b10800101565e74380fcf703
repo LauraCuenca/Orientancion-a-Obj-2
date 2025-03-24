@@ -1,0 +1,15 @@
+package ar.edu.unlp.info.oo2.RedSocial;
+
+public class ReTweet extends Tweet{
+	private Tweet twOrig;
+
+	public ReTweet(Tweet twOrig) {
+		super(twOrig.getMensaje());
+		this.twOrig= twOrig;
+	}
+	
+	public Tweet getTweetOrig() {
+		return twOrig;
+	}
+
+}

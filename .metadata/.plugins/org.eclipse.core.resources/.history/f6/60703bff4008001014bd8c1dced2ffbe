@@ -1,0 +1,6 @@
+package ar.edu.unlp.info.oo2.RedSocial;
+
+public class Twitter {
+	private ArrayList<Usuario> Usuarios;
+
+}

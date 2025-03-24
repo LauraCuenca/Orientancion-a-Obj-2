@@ -1,0 +1,17 @@
+package ar.edu.unlp.info.oo2.PiedraPapelTijera;
+
+public class Papel extends Opcion{
+
+	public Papel(String n) {
+		super("Papel");
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public String jugarContra(Opcion otro) {
+		if(otro instanceof Papel) return "Empate";
+		if(otro instanceof Tijera || otro instanceof Lagarto) return "Pierde Papel";
+		return "Pierde Papel";
+	}
+
+}

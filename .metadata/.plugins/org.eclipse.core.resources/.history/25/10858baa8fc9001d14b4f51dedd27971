@@ -1,0 +1,63 @@
+package ar.edu.info.unlp.ejercicioDemo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Usuario {
+	public void setTweets(List<Tweet> tweets) {
+		this.tweets = tweets;
+	}
+	private String screenName;
+	private List <Tweet> tweets;
+	
+	private void setScreenName(String screenName) {
+		this.screenName = screenName;
+	}
+
+	private void setTweets() {
+		this.tweets = new ArrayList<>();
+	}
+	
+	public Usuario(String name) {
+		setScreenName(name);
+		setTweets();
+	}
+
+	//hacer un tweet
+	public void hacerTweet (String s) {
+		if (s.length() > 1 & s.length() < 280) {
+			Tweet tw= new Tweet(s);
+	this.tweets.add(tw);
+		}	
+	}
+   // Re Tweet
+	public void ReTweet (Tweet t) {
+		Tweet miTweet = new Tweet (t.getTexto() ,t.getUsuario() );
+		miTweet.hacerReTweet(t);
+		this.tweets.add(miTweet);
+	}
+  // eliminar tweet
+	public void elimTweet (Tweet t) {
+		this.tweets.remove(t);
+		t=null;
+		System.gc();
+	}
+  // eliminar todoooo
+	public void elimTodo() {
+		this.tweets.clear();
+		System.gc();
+	}
+
+	public String getScreenName() {
+		return screenName;
+	}
+
+	public List<Tweet> getTweets() {
+		return tweets;
+	}
+	
+	public Usuario getUsuario() {
+		return this;
+	}
+
+}

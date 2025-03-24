@@ -1,0 +1,14 @@
+package ar.edu.unlp.info.oo2.RedSocial;
+
+public class Tweet {
+	
+	private String mensaje;
+	
+	public Tweet(String msj) {
+		if (msj == null || msj.length() < 1 || msj.length() > 280) {
+			throw new IllegalArgumentException("El tweet debe tener entre 1 y 280 caracteres.");
+		}
+		this.mensaje= msj;
+	}
+
+}

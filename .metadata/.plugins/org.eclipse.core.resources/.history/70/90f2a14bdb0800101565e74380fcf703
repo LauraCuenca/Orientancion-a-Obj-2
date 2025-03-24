@@ -1,0 +1,15 @@
+package ar.edu.unlp.info.oo2.PiedraPapelTijera;
+
+public class Piedra extends Opcion{
+
+	public Piedra() {
+		super("Piedra");
+	}
+
+	@Override
+	public String jugarContra(Opcion otro) {
+		if(otro instanceof Piedra) return "Empate";
+	    if(otro instanceof Tijera || otro instanceof Lagarto) return "Gana Piedra";
+		return null;
+	}
+}
