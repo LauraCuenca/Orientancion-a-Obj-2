@@ -1,11 +1,11 @@
-```
+
 ### Ejercicio 1: Algo huele mal
 Indique qué malos olores se presentan en los siguientes ejemplos.	
-```
-```	
+
+
 ### 1.1 Protocolo de Cliente
 La clase Cliente tiene el siguiente protocolo. ¿Cómo puede mejorarlo? 
-```
+
 ```java
 /** 
 * Retorna el límite de crédito del cliente
@@ -43,9 +43,9 @@ protected double montoFacturado(LocalDate f1, LocalDate f2) {...
 */
 private double montoCobrado(LocalDate f1, LocalDate f2) {...
 ```
-```
+
 ### 1.2 Participación en proyectos 
-```
+
 ```
 Al revisar el siguiente diseño inicial (Figura 1), se decidió realizar un cambio para evitar lo que se consideraba un mal olor. El diseño modificado se muestra en la Figura 2. Indique qué tipo de cambio se realizó y si lo considera apropiado. Justifique su respuesta.
 
@@ -59,10 +59,10 @@ Se realizo un Move Method, se ambio la coleccion de participantes que estaba en 
 Se producia el Bad Smeell, envidia de atributos. Ya que le corresponde a la clase proyecto verificar en la coleccion si x persona esta.
 ```
 
-```
+
 ### 1.3 Cálculos 
 Analice el código que se muestra a continuación. Indique qué code smells encuentra y cómo pueden corregirse.
-```
+
 ```java		
 public void imprimirValores() {
 	int totalEdades = 0;
