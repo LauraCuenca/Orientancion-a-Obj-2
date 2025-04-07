@@ -24,8 +24,8 @@ private double mtCbE(LocalDate f1, LocalDate f2) {...
 ```
 					
 ```
-#### Bad Smell: Nombre de los metodos
-#### Refactoring: Rename Method
+Bad Smell: Nombre de los metodos
+Refactoring: Rename Method
 ```
 ```java
 /** 
